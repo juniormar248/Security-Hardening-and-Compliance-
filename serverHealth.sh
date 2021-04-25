@@ -22,7 +22,7 @@ ps >> $dir/$file #This line prints the command to the file
 echo "-----------------------------------------" >> $dir/$file # This line prints text to the file
 uptime >> $dir/$file #This line prints the command to the file
 
-days=$(uptime | awk '{print $5}') # this saves the out put of the awk of uptime to variable days
+days=$(uptime | awk '{print $3}') # this saves the out put of the awk of uptime to variable days
 
 if [ $days>2 ] # This line starts an if statement and if the variable day is greater than 2 it runs
 then# this starts the next command
