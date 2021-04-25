@@ -22,7 +22,7 @@ ps >> $dir/$file
 echo "-----------------------------------------" >> $dir/$file
 uptime >> $dir/$file
 
-days=uptime | awk '{print $3}'
+days=$(uptime | awk '{print $5}')
 
 if [ $days>2 ]
 then
